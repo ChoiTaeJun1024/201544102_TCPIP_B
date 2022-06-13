@@ -14,6 +14,7 @@
 ## 프로젝트 코드
 ### Server.py
 ```python
+  1 import socket
   2 import threading
   3 from threading import Thread
   4
