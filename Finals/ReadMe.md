@@ -8,7 +8,8 @@
 ***
 
 ## 프로젝트 실행 결과
-<img width="" height="" src=5주차실습화면.png></img>
+<img width="" height="" src=result1.png></img>
+<img width="" height="" src=result2.png></img>
 
 ## 6주차 udp 실습화면 (2022-04-07)
 <img width="" height="" src=6주차_과제_udp.png></img>
