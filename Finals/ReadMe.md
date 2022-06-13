@@ -13,7 +13,7 @@
 
 ## 프로젝트 코드
 ### Server.py
-```
+```python
   2 import threading
   3 from threading import Thread
   4
@@ -41,7 +41,7 @@
 ```
 
 ### Client.py
-```
+```python
   1 import socket
   2
   3 # 채팅을 유지하기 위해 반복문 사용
