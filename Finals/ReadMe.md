@@ -11,7 +11,33 @@
 <img width="" height="" src=result1.png></img>
 <img width="" height="" src=result2.png></img>
 
-## 6주차 udp 실습화면 (2022-04-07)
+## 프로젝트 코드
 <img width="" height="" src=6주차_과제_udp.png></img>
-## 6주차 tcp 실습화면 (2022-04-07)
-<img width="" height="" src=6주차_과제_tcp.png></img>
+
+### Server.py
+```
+  2 import threading
+  3 from threading import Thread
+  4
+  5 # 클라이언트 연결 처리
+  6 def handleConnection(s, i):
+  7     # 메세지 수신
+  8     reply = s.recv(1024).decode("utf-8")
+  9     print("Client: " + reply)
+ 10
+ 11     # 메세지 송신
+ 12     message = input("Server: ")
+ 13     s.send(str(message).encode("utf-8"))
+ 14
+ 15 # 소켓 설정
+ 16 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+ 17 s.bind(("0.0.0.0", 7777))
+ 18 s.listen(5)
+ 19 i = 0
+ 20
+ 21 # 잠금 정의
+ 22 lock = threading.Lock()
+ 23
+ 24 # 쓰레드 실행
+                                                              7,5           12%
+```
