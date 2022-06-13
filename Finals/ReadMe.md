@@ -37,7 +37,14 @@
  22 lock = threading.Lock()
  23
  24 # 쓰레드 실행
-                                                              7,5           12%
+ 25 while True:
+ 26     lock.acquire()
+ 27     i += 1
+ 28     cs, addr = s.accept()
+ 29     t = Thread(target = handleConnection, args = (cs, i))
+ 30     t.start()
+ 31     lock.release()
+                                                             7,5           12%
 ```
 
 ### Client.py
