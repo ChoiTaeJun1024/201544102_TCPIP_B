@@ -12,8 +12,6 @@
 <img width="" height="" src=result2.png></img>
 
 ## 프로젝트 코드
-<img width="" height="" src=6주차_과제_udp.png></img>
-
 ### Server.py
 ```
   2 import threading
@@ -40,4 +38,25 @@
  23
  24 # 쓰레드 실행
                                                               7,5           12%
+```
+
+### Client.py
+```
+  1 import socket
+  2
+  3 # 채팅을 유지하기 위해 반복문 사용
+  4 while True:
+  5
+  6     # 서버에 연결
+  7     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  8     s.connect(("127.0.0.1", 7777))
+  9
+ 10     # 메세지 송신
+ 11     msg = input("Client: ")
+ 12     s.send(str(msg).encode())
+ 13
+ 14     # 메세지 수신
+ 15     reply = s.recv(1024).decode("utf-8")
+ 16     print("Server: " + reply)
+"client.py" 16L, 370B                                         3,1           All
 ```
